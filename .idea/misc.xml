@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1239488731920619" />
+        <entry key="app/src/main/res/drawable/add_todo_box.xml" value="0.207" />
+        <entry key="app/src/main/res/drawable/back.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/box.xml" value="0.246" />
+        <entry key="app/src/main/res/drawable/category_box.xml" value="0.2625" />
+        <entry key="app/src/main/res/drawable/category_box_selected.xml" value="0.2625" />
+        <entry key="app/src/main/res/drawable/close.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/edittext_bg.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1915" />
+        <entry key="app/src/main/res/drawable/ic_bulb.xml" value="0.218" />
+        <entry key="app/src/main/res/drawable/info.xml" value="0.2955" />
+        <entry key="app/src/main/res/drawable/open_link.xml" value="0.205" />
+        <entry key="app/src/main/res/drawable/search.xml" value="0.205" />
+        <entry key="app/src/main/res/drawable/settings_white.xml" value="0.2545" />
+        <entry key="app/src/main/res/drawable/star.xml" value="0.203" />
+        <entry key="app/src/main/res/font/helvetica_semibold.xml" value="0.38645833333333335" />
+        <entry key="app/src/main/res/font/hind_medium.xml" value="0.38645833333333335" />
+        <entry key="app/src/main/res/font/open_sans_bold.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/font/open_sans_italic.xml" value="0.38645833333333335" />
+        <entry key="app/src/main/res/layout/active_session.xml" value="0.25677083333333334" />
+        <entry key="app/src/main/res/layout/active_session_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.23877917414721722" />
+        <entry key="app/src/main/res/layout/activity_lock_screen.xml" value="0.1875" />
+        <entry key="app/src/main/res/layout/activity_permissions_screen.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_welcome_screen.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/another_rich_link_preview.xml" value="0.23177083333333334" />
+        <entry key="app/src/main/res/layout/apps_usage_listitem.xml" value="0.2916666666666667" />
+        <entry key="app/src/main/res/layout/bottomsheet_container.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/category.xml" value="0.9" />
+        <entry key="app/src/main/res/layout/create_profile_bottomsheet_1.xml" value="0.3182291666666667" />
+        <entry key="app/src/main/res/layout/create_profile_bottomsheet_2.xml" value="0.18072916666666666" />
+        <entry key="app/src/main/res/layout/fragment_add_todo.xml" value="0.23541666666666666" />
+        <entry key="app/src/main/res/layout/fragment_app_info.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/fragment_create_profile1.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/layout/fragment_create_profile_first_page.xml" value="0.23177083333333334" />
+        <entry key="app/src/main/res/layout/fragment_create_profile_second_page.xml" value="0.2765625" />
+        <entry key="app/src/main/res/layout/fragment_todo_webview.xml" value="0.22447916666666667" />
+        <entry key="app/src/main/res/layout/fragment_todolist.xml" value="0.2109375" />
+        <entry key="app/src/main/res/layout/permission_screen.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/rich_link_preview.xml" value="0.2109375" />
+        <entry key="app/src/main/res/layout/search_app_dialog.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/layout/wecome_screen.xml" value="0.328804347826087" />
+        <entry key="app/src/main/res/layout/welcome_screen.xml" value="0.21693840579710144" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

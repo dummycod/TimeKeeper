@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="top1"
+            type="com.ignitedminds.blockit.data.uibinding.AppNameIcon" />
+
+        <variable
+            name="top2"
+            type="com.ignitedminds.blockit.data.uibinding.AppNameIcon" />
+
+        <variable
+            name="top3"
+            type="com.ignitedminds.blockit.data.uibinding.AppNameIcon" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_fill"
+        android:fillViewport="true"
+        tools:context=".ui.Dashboard">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!---->
+
+            <LinearLayout
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                >
+
+                <ProgressBar
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:indeterminate="true"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingHorizontal="12dp"
+                    android:text="Updating data please wait.."
+                    android:textColor="@color/heading_color"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/data_screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/primary"
+                        android:minHeight="?attr/actionBarSize"
+                        android:theme="?attr/actionBarTheme"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <RelativeLayout
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_below="@id/app_bar_layout"
+                    android:background="@drawable/box"
+                    android:orientation="vertical"
+                    android:padding="28dp">
+
+                    <TextView
+                        android:id="@+id/total_time_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Today's Screen Time"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="28dp"
+                        android:fontFamily="@font/open_sans"
+                        android:text="6hr 45min"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/app_lock_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/total_time_heading"
+                        android:layout_marginTop="28dp"
+                        android:fontFamily="@font/open_sans"
+                        android:text="App Locker"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/locker_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/total_time_heading"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp" />
+
+
+                    <!--<LinearLayout
+                        android:id="@+id/status_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Screen Time Today  "
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                             />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6hr 45min"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/super_lock"
+                        android:layout_below="@id/status_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lock Status"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/locker_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp" />
+                    </LinearLayout>-->
+
+                </RelativeLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/banner"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginEnd="30dp"
+                    android:backgroundTint="@color/primary"
+                    app:borderWidth="0dp"
+                    app:fabCustomSize="55dp"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/time_killer_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fab"
+                    android:layout_marginTop="42dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:paddingHorizontal="12dp"
+                    android:text="This Week's Top 3 Time Killers"
+                    android:textColor="@color/heading_color"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/time_killer_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_killer_heading"
+                    android:layout_marginTop="16dp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/box"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingVertical="8dp">
+
+                        <ImageView
+                            android:id="@+id/top1img"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@{top1.image}" />
+
+                        <TextView
+                            android:id="@+id/top1name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/open_sans"
+                            android:text="@{top1.name}"
+                            android:textColor="@color/text_color"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/box"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingVertical="8dp">
+
+                        <ImageView
+                            android:id="@+id/top2img"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@{top2.image}" />
+
+                        <TextView
+                            android:id="@+id/top2name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/open_sans"
+                            android:text="@{top2.name}"
+                            android:textColor="@color/text_color"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/box"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingVertical="8dp">
+
+                        <ImageView
+                            android:id="@+id/top3img"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@{top3.image}" />
+
+                        <TextView
+                            android:id="@+id/top3name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/open_sans"
+                            android:text="@{top3.name}"
+                            android:textColor="@color/text_color"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/apps_usage_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_killer_container"
+                    android:layout_marginTop="42dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:paddingHorizontal="12dp"
+                    android:text="App Screen Time Today"
+                    android:textColor="@color/heading_color"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/search_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/time_killer_container"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/rounded_corner_box"
+                    android:elevation="1dp"
+                    android:padding="8dp"
+                    android:src="@drawable/search" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/app_usage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/apps_usage_heading"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/box"
+                    android:elevation="1dp"
+                    android:overScrollMode="never"
+                    tools:listitem="@layout/apps_usage_listitem" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

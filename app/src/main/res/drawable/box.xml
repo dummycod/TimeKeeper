@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!--Minus (-) how much dp you gave in the stroke width from left right top-->
+<item>
+    <shape
+        android:shape="rectangle">
+        <stroke
+            android:width="0.005in"  android:color="#DDDDDD" />
+        <solid android:color="@color/secondary" />
+    </shape>
+</item>
+</layer-list>
